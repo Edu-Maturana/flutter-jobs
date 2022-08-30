@@ -60,15 +60,22 @@ class MainScreen extends StatelessWidget {
         Text(""),
         Text("For you", style: TextStyle(fontSize: 20, color: Colors.black54)),
         Text(""),
-        JobCarousel(),
+        JobCarousel(
+          title: "For You",
+        ),
         Text(""),
-        Text("NZ Jobs", style: TextStyle(fontSize: 20, color: Colors.black54)),
+        Text("Work from anywhere",
+            style: TextStyle(fontSize: 20, color: Colors.black54)),
         Text(""),
-        JobCarousel(),
+        JobCarousel(
+          title: "New Zealand",
+        ),
         Text(""),
         Text("US Jobs", style: TextStyle(fontSize: 20, color: Colors.black54)),
         Text(""),
-        JobCarousel(),
+        JobCarousel(
+          title: "3",
+        ),
       ]),
     );
   }
