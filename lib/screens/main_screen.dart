@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/components/job_carousel.dart';
 
 // create main screen
 class MainScreen extends StatelessWidget {
@@ -55,6 +56,11 @@ class MainScreen extends StatelessWidget {
               'Find your next job',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(""),
+            Text("For you",
+                style: TextStyle(fontSize: 20, color: Colors.black54)),
+            Text(""),
+            JobCarousel(),
           ]),
     );
   }
