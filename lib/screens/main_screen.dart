@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/components/job_carousel.dart';
+import 'package:flutter_1/classes/job.dart';
+import 'package:flutter_1/classes/company.dart';
 
 // create main screen
 class MainScreen extends StatelessWidget {
@@ -45,23 +47,29 @@ class MainScreen extends StatelessWidget {
   Widget _textsHeader(context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              'Hi Eduardo!',
-              style: Theme.of(context).textTheme.headline3,
-            ),
-            Text(
-              'Find your next job',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(""),
-            Text("For you",
-                style: TextStyle(fontSize: 20, color: Colors.black54)),
-            Text(""),
-            JobCarousel(),
-          ]),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
+          Widget>[
+        Text(
+          'Hi Eduardo!',
+          style: Theme.of(context).textTheme.headline3,
+        ),
+        Text(
+          'Find your next job',
+          style: Theme.of(context).textTheme.headline4,
+        ),
+        Text(""),
+        Text("For you", style: TextStyle(fontSize: 20, color: Colors.black54)),
+        Text(""),
+        JobCarousel(),
+        Text(""),
+        Text("NZ Jobs", style: TextStyle(fontSize: 20, color: Colors.black54)),
+        Text(""),
+        JobCarousel(),
+        Text(""),
+        Text("US Jobs", style: TextStyle(fontSize: 20, color: Colors.black54)),
+        Text(""),
+        JobCarousel(),
+      ]),
     );
   }
 }

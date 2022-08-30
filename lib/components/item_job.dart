@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/classes/job.dart';
 
 class ItemJob extends StatelessWidget {
+  // receive job data
+  Job? job;
+  ItemJob({this.job});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +32,7 @@ class ItemJob extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                image: AssetImage('assets/img/apple.png'),
+                image: NetworkImage(job?.company?.urlLogo ?? ''),
                 fit: BoxFit.cover,
               ),
             ),
@@ -36,15 +41,16 @@ class ItemJob extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('Apple', style: TextStyle(color: Colors.black54)),
-              Text('Software Engineer',
+              Text(job?.company?.name ?? '',
+                  style: TextStyle(color: Colors.black54)),
+              Text(job?.role ?? '',
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.black54)),
               Row(children: [
                 Icon(Icons.location_on, color: Colors.black54),
-                Text('San Francisco, CA',
+                Text(job?.location ?? '',
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
